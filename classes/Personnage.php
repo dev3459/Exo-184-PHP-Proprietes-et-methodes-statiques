@@ -13,6 +13,7 @@ class Personnage {
 
     const DEGATS_MIN = 1;
 
+    private static $nbrDragon;
 
     // J'ajoute une propriété statique à ma classe personnage
     protected static $numInstances;
@@ -24,6 +25,7 @@ class Personnage {
         $this->y = 0;
         $this->vie = 50;
 
+        self::$nbrDragon++;
         // A chaque fois que le constructeur de ma classe personnage , je vais incrémenter la propriété statique $numInstances
         // Cela va me permettre de connaitre le nombre d'instances créées
         self::$numInstances++;
@@ -31,9 +33,14 @@ class Personnage {
         // en elle même et pas à ses instances
     }
 
+    public static function getNbrDragon() {
+        // Complétez le code ici
+        return self::$nbrDragon;
+    } 
+
     public static function getNumInstances() {
         // Complétez le code ici
-        return
+        return self::$numInstances;
     }
 
     // Méthode permettant de déplacer le personnage vers la droite

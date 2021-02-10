@@ -18,10 +18,5 @@ $dragon->setNom("");
 // Creation d'une instance de princesse
 $princesse = new Princesse();
 
-// Creation d'ne instance de sorcier
-$sorcier = new Sorcier();
-
-
-
-
-
+echo Personnage::getNumInstances()."<br>";
+echo Dragon::getNbrDragon();
